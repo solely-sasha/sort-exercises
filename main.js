@@ -1,7 +1,7 @@
 // 1) Sort an array from smallest number to largest**
 
 function leastToGreatest(arr) {
- const smallToBig = arr.sort(a => a - b)
+ const smallToBig = arr.sort((a, b) => a - b)
  return smallToBig;
 }
 
@@ -14,7 +14,8 @@ console.log(leastToGreatest([1, 3, 5, 2, 90, 20])); // [1, 2, 3, 5, 20, 90]
 
 
 function greatestToLeast(arr) {
-  // your code here
+ const bigToSmall = arr.sort((a, b) => b - a)
+ return bigToSmall;
 }
 
 console.log(greatestToLeast([1, 3, 5, 2, 90, 20])); // [90, 20, 5, 3, 2, 1]
@@ -26,7 +27,10 @@ console.log(greatestToLeast([1, 3, 5, 2, 90, 20])); // [90, 20, 5, 3, 2, 1]
 // 3) Sort an array from shortest string to longest**
 
 function lengthSort(arr) {
-  // your code here
+  
+  const strShortToLong = arr.sort((a, b) => a.length - b.length)
+
+  return strShortToLong;
 }
 
 console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "wolf", "eaten", "family"]
@@ -38,7 +42,8 @@ console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"])); // ["by", "do
 
 
 function alphabetical(arr) {
-
+const sortedArray = arr.sort();
+return sortedArray;
 }
 
 console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "eaten", "family", "wolf"]
@@ -49,7 +54,8 @@ console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "
 // 5) Sort the objects in the array by age**
 
 function byAge(arr){
-    // your code here
+    const sortedAges = arr.sort((a, b)=> a.age - b.age)
+    return sortedAges;
   }
   
   console.log(byAge([
